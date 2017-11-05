@@ -3,25 +3,29 @@
 
 ## How to start:
 
-1. Preapare environment variables for easy DB configuration as shown in the shell commands (fake user and password values are shown as example).
-2. Create the DB table with migrations.
-3. Seed the DB for easy testing.
-4. Start an artisan development server.
+1. On your development machine, preapare a MySQL DB and environment variables for easy DB configuration as shown in the following shell commands (fake user and password values are shown as example).
 
 
+2. Create the DB table with migrations at root dir:
 ```shell
 DB_HOST=localhost DB_NAME=todos DB_USERNAME=root DB_PASSWORD=passpasspass php artisan db:migrate
 ```
 
-
+3. Seed the DB for easy testing at root dir:
 ```shell
 DB_HOST=localhost DB_NAME=todos DB_USERNAME=root DB_PASSWORD=passpasspass php artisan db:seed
 ```
 
+4. Install the frontend dependencies:
+```shell
+cd public && bower install
+```
 
+4. Start an artisan development server at root dir:
 ```shell
 DB_HOST=localhost DB_NAME=todos DB_USERNAME=root DB_PASSWORD=passpasspass php artisan serve
 ```
+
 
 
 
