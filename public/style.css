@@ -1,0 +1,180 @@
+body {
+	font: 19px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 3em;
+	background-color: rgb(229, 229, 229);
+	color: black;
+	width: 550px;
+	margin: 0 auto;
+	direction: rtl;
+}
+
+#todoapp {
+	margin: 130px 0 40px 0;
+	position: relative;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+				0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+#header {
+	padding-top: 15px;
+	
+	border-radius: inherit;
+	border-bottom: 1px solid #6c615c;
+	
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2),
+				0 25px 50px 0 rgba(0, 0, 0, 0.15);
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	background: rgb(246,230,180); /* Old browsers */
+	background: -moz-linear-gradient(top, rgb(246,230,180) 0%, rgb(237,144,23) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgb(246,230,180) 0%,rgb(237,144,23) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgb(246,230,180) 0%,rgb(237,144,23) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#header input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+
+	border: none;
+	background: inherit;
+
+	font: 19px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+	align-self: baseline;
+
+	margin-right: 40px;
+	margin-bottom: 15px;
+}
+
+#header input::placeholder
+{
+	color: black;
+}
+
+#header #plus-sign {
+	color: black;
+
+	font-size: 28px;
+
+	border: none;
+	border-radius: 20%;
+
+	margin-right: 60px;
+
+	background: rgb(238,238,238); /* Old browsers */
+	background: -moz-linear-gradient(top, rgb(238,238,238) 0%, rgb(204,204,204) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgb(238,238,238) 0%,rgb(204,204,204) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgb(238,238,238) 0%,rgb(204,204,204) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#todo-list {
+	width: 500px;
+	height: 300px;
+	overflow: auto;
+
+	counter-reset: li-count;
+}
+
+#todo-list li {
+	border-bottom: 1px solid black;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	counter-increment: li-count;
+}
+
+#todo-list li label:before {
+	content: counter(li-count) '. ';
+	font-weight: bold;
+}
+
+#todo-list li:nth-child(odd) {
+	background: rgb(241, 248, 226);
+}
+
+#todo-list li:nth-child(even) {
+	background: rgb(255, 255, 255);
+}
+
+#todo-list li.completed {
+	color: rgb(115, 115, 115);
+	text-decoration: line-through;
+}
+
+#todo-list li div#meta-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;	
+}
+
+#todo-list li div#meta-container label {
+    margin-right: 30px;
+}
+
+#todo-list li input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+
+	border-radius: 20%;
+	box-sizing: border-box;
+
+	margin: 15px;
+
+
+	float: left;
+
+	width: 20px;
+	height: 20px;
+
+	border: 1px solid rgba(143, 143, 143, .2);
+}
+
+#todo-list li input:checked {
+	background: rgb(115, 115, 115);
+}
+
+#todo-list li input:not(checked) {
+	background: rgb(235, 235, 235);
+}
+
+#todo-list li .edit {
+	width: 100%;
+	align-self: center;
+
+	font-size: 14px;
+	
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+#todo-list li .destroy {
+	position: relative;
+	color: black;
+	font-size: 18px;
+
+	-webkit-appearance: media-slider;
+	-moz-appearance: radio-container;
+}
+
+#todo-count {
+	display: flex;
+	justify-content: space-evenly;
+}

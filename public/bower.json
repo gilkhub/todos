@@ -1,0 +1,24 @@
+{
+  "name": "todos",
+  "authors": [
+    "gilk <gilktest@gilktest.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  
+  "dependencies": {
+    "jquery": "1.11.2",
+    "handlebars": "1.3.0",
+    "ember": "1.10.0",
+    "ember-data": "1.13.8"
+  }
+}
