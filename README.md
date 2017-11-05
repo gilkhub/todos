@@ -16,18 +16,20 @@ DB_HOST=localhost DB_NAME=todos DB_USERNAME=root DB_PASSWORD=passpasspass php ar
 DB_HOST=localhost DB_NAME=todos DB_USERNAME=root DB_PASSWORD=passpasspass php artisan db:seed
 ```
 
-4. Install the frontend dependencies:
+4. Install frontend dependencies:
 ```shell
 cd public && bower install
 ```
 
-4. Start an artisan development server at root dir:
+5. Start an artisan development server at root dir:
 ```shell
 DB_HOST=localhost DB_NAME=todos DB_USERNAME=root DB_PASSWORD=passpasspass php artisan serve
 ```
 
-
-
+6. In your browser (supports Chrome and FireFox) go to:
+```
+http://localhost:8000/
+```
 
 ## Developed and tested with the following versions:
 
